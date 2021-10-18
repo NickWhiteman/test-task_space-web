@@ -14,8 +14,8 @@ body {
 .app__page {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr;
-  grid-template-rows: 1fr;
+  -ms-grid-rows: 40px 1fr;
+  grid-template-rows: 40px 1fr;
   -ms-grid-columns: 211px 1fr;
   grid-template-columns: 211px 1fr;
 }
@@ -30,17 +30,63 @@ body {
   -ms-grid-column: 2;
 }
 
+.app__page > *:nth-child(3) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.app__page > *:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
 .app__left-panel {
   width: 211px;
   height: 659px;
   background-color: #062436;
 }
 
+.app__head-buttons {
+  margin-top: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: gray;
+}
+.app__head-buttons .head-buttons__inform-panel {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70px 80px 100px 100px;
+  grid-template-columns: 70px 80px 100px 100px;
+}
+.app__head-buttons .head-buttons__inform-panel .inform-panel__bell-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-right: 7px;
+}
+.app__head-buttons .head-buttons__inform-panel .inform-panel__exit {
+  margin-right: 18px;
+  text-align: end;
+}
+
 .app__dashboard-container {
-  margin-top: 61px;
-  margin-left: 20px;
-  width: 1029px;
+  margin-top: 21px;
+  margin-left: 233px;
+  min-width: 1029px;
   height: 598px;
+  -webkit-box-shadow: 1px 1px 4px #E3E9EC;
+          box-shadow: 1px 1px 4px #E3E9EC;
   background-color: white;
 }
 

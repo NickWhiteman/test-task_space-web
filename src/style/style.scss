@@ -18,7 +18,7 @@ body {
 
 .app__page {
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: 40px 1fr;
     grid-template-columns: 211px 1fr;
 };
 
@@ -28,11 +28,36 @@ body {
     background-color: $backColorPanel;
 };
 
+.app__head-buttons {
+    margin-top: 22px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    color: gray;
+
+    .head-buttons__inform-panel {
+        display:grid;
+        grid-template-columns: 70px 80px 100px 100px;
+
+        .inform-panel__bell-icon{
+            display: flex;
+            justify-content: end;
+            padding-right: 7px;
+        };
+        
+        .inform-panel__exit {
+            margin-right: 18px;
+            text-align: end;
+        };
+    };
+}
+
 .app__dashboard-container {
-    margin-top: 61px;
-    margin-left: 20px;
-    width: 1029px;
+    margin-top: 21px;
+    margin-left: 233px;
+    min-width: 1029px;
     height: 598px;
+    box-shadow: 1px 1px 4px #E3E9EC;
     background-color: white;
 };
 

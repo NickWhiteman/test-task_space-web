@@ -1,3 +1,4 @@
+import { SyntheticEvent } from "react";
 import {
   accountIcon,
   domainIcon,
@@ -5,9 +6,31 @@ import {
   logoSpaceWeb,
   vpsIcon
 } from "../../icons/icons";
+import { IMenuSettings } from "../../types";
 import './style/style.css';
 
-export const SideMenu = () => {
+type SideMenuProps = {
+  buttonsSetting: IMenuSettings
+}
+
+export const SideMenu: React.FC<SideMenuProps> = ({
+  buttonsSetting
+}) => {
+  const renderButtonContent: JSX.Element[] = [];
+
+  //  анонимная функция собирает верстку для рендера табов меню из обьекта настроек.
+  
+  (function() {
+    for (let key in buttonsSetting) {
+      renderButtonContent.push(
+        <div key={`tab-${key}`} className="panel__tab">
+          {buttonsSetting[key]}
+          <span className='menu-tab'>{key}</span>
+        </div>
+      );
+    }
+  })();
+
   return (
     <>
       <div className="left-panel__menu">
@@ -17,22 +40,9 @@ export const SideMenu = () => {
           </div>
         </div>
         <div className="menu__panel">
-          <div className="panel__tab">
-            {accountIcon}
-            <span className='menu-tab'>АККАУНТ</span>
-          </div>
-          <div className="panel__tab">
-            {vpsIcon}
-            <span className='menu-tab'>VSP</span>
-          </div>
-          <div className="panel__tab">
-            {domainIcon}
-            <span className='menu-tab'>ДОМЕНЫ</span>
-          </div>
-          <div className="panel__tab active">
-            {helpIcon}
-            <span className='menu-tab'>БОРТОВОЙ ЖУРНАЛ</span>
-          </div>
+          {
+            renderButtonContent.map(item => item)
+          }
         </div>
       </div>
     </>
