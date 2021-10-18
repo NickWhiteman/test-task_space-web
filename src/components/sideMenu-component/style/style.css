@@ -1,0 +1,38 @@
+.menu__logo {
+  margin: 20px 20px 65px 20px;
+}
+
+.menu-tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 15px;
+  height: 40px;
+  width: 211px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+
+.panel__tab {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.panel__tab.active {
+  padding-left: 15px;
+  background-color: #15526A;
+  border-left: 6px solid #3DBDF6;
+}

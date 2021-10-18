@@ -1,0 +1,31 @@
+$borderTabMenuButton: #3DBDF6;
+$activeTabColor: #15526A;
+// border-left: 6px solid $borderTabMenuButton;
+
+.menu__logo {
+    margin: 20px 20px 65px 20px;
+};
+
+.menu-tab {
+    display: flex;
+    align-items:center;
+    margin-left: 15px;
+    height: 40px;
+    width: 211px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+};
+
+.panel__tab {
+    align-items:center;
+    padding-left: 21px;
+    display: flex;
+    flex-direction: row;
+}
+
+.panel__tab.active {
+    padding-left: 21px - 6px;
+    background-color: $activeTabColor;
+    border-left: 6px solid $borderTabMenuButton;
+};

@@ -1,0 +1,17 @@
+$colorInfo: #3DBDF6;
+
+.footer__left-info {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 0 20px;
+};
+
+.footer__right-info {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 20px 0;
+};
+
+.important-info {
+    color: $colorInfo;
+}
